@@ -13,4 +13,13 @@ function range(low = 1, high = 10, step = 1) {
   return arr;
 }
 
-export { range };
+function sum(array) {
+  return array.reduce((sum, acc) => sum + acc);
+}
+
+
+
+export { range, sum };
+
+  
+
