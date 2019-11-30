@@ -45,6 +45,6 @@ function countChars(str) {
 
 
 
-export { range, sum };
+export { range, sum, countChars };
 
 
