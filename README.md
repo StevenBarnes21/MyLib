@@ -9,6 +9,6 @@ would have an output of [2,4,6,8,10]
 
 # Syntax
 
-range(low)
-range(low, high)
-range(low, high, step)
+range(low) <br>
+range(low, high) <br>
+range(low, high, step) <br>
