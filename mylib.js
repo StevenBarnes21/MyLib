@@ -14,7 +14,20 @@ function range(low = 1, high = 10, step = 1) {
 //Sums together all the numbers in an array of numbers
 function sum(array) {
 
-  if (!Array.isArray(array)) throw new Error("Not of type array in sum(array)");
+  if (!Array.isArray(array)) {
+    throw new Error("Not of type array in sum(array)");
+  
+  } else {
+    array.forEach(num => {
+    if (!Number.isFinite(num)) {
+      throw new Error("Array must only contain numbers in sum(array");
+    }
+      console.log(num);
+    });
+  }
+
+  
+      
 
   return array.reduce((sum, acc) => sum + acc);
 }
