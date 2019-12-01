@@ -35,18 +35,24 @@ function sum(array) {
 //returns an object containing the characters as keys and the tally as values
 function countChars(str) {
 
+  str = str.toLowerCase();
+
   if (typeof str !== 'string') throw new Error("Input needs to be a string in countChars(str)");
   let obj = {};
+  let char;
 
   for (let i = 0; i < str.length; i++) {
     
-    if (str[i] == " ") {
+    char = str[i];
+
+    // skip anything that is not alphanumeric
+    if (!char.match(/\w/)) {
       continue;
     }
-    else if (obj[str[i]]) {
-      obj[str[i]]++;
+    else if (obj[char]) {
+      obj[char]++;
     } else {
-      obj[str[i]] = 1;
+      obj[char] = 1;
     }
   }
 
